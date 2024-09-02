@@ -32,3 +32,9 @@
 .white{
   color: white;
 }
+
+.game-info{
+  float: right;
+  margin-right: 100px;
+  color: white;
+}

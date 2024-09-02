@@ -1,20 +1,18 @@
 import Cell from "./Cell";
 import react, { useState } from "react";
 
-export default function Board() {
-    const [xIsNext, setXIsNext] = useState(true);
-    const [values, setValue] = useState(Array(9).fill(''));
+export default function Board({values,xIsNext,onPlay}) {
+   
 
     function cellClicked(i) {
         if(values[i] || findWinner(values))
             return;
-        const nextValue = values.slice();
+        const newValue = values.slice();
         if (xIsNext)
-            nextValue[i] = 'X';
+            newValue[i] = 'X';
         else
-            nextValue[i] = 'O';
-        setValue(nextValue);
-        setXIsNext(!xIsNext);
+            newValue[i] = 'O';
+        onPlay(newValue);
     }
 
 
