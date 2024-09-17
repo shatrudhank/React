@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="navigate_to_react">Navigate to react app</string>
+    <string name="hello_world_i_am_android_native">Hello world! This is android layout</string>
+</resources>
